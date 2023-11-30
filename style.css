@@ -15,6 +15,10 @@
   font-family: medium;
 }
 
+.content{
+
+}
+
 .bg {
   position: absolute;
   width: 100%;
@@ -46,19 +50,31 @@
 
 .navleft {
   align-self: end;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  display: flex;
+  display: inline-flex;
+}
+
+.navleft p{
+  margin-top:5px;
+  margin-right:2px;
+  font-weight: bold;
+  color: var(--gray);
+  text-decoration: none;
 }
 
 .name {
-  padding-left: 8px;
   font-weight: bold;
   color: var(--light);
   font-size: 1.5rem;
+  text-decoration: none;
 }
 
 .arrowright {
   position: absolute;
   padding: 3px;
+  margin-left: 205px;
   margin-top:12px;
   border: solid black;
   border-width: 0 3px 3px 0;
@@ -67,13 +83,32 @@
 }
 
 .navcenter {
-  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .navcenter a {
-  padding: 15px;
+  padding:15px;
   text-decoration: none;
+  transition: transform 0.3s ease;
   color: var(--light)
+}
+
+.navcenter a:hover{
+  transform: scale(1.1);
+}
+
+.navright a{
+  padding:15px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  color: var(--light)
+}
+
+.navright a:hover{
+  transform: scale(1.1);
 }
 
 .navright {
@@ -225,10 +260,22 @@
 /*grid*/
 .content {
   position: absolute;
-  top: 50%;
-  left:50%;
+  top:25%;
+  left:60%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 1fr;
-  background-color: red;
+  grid-template-areas: 
+    "content content content content content"
+    "content content content content content"
+  }
+
+  .bear{
+    
+    width: 16rem;
+    height: auto;
+    border-radius: 15px;
+
+  }
+
+  .content-left{
+    background-color: var(--black);
   }
